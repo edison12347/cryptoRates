@@ -36,5 +36,6 @@ def rates(request):
     print(averagePrice_24h)
     getExchangeRate_UAH("USD")
     # temp = template.loader.get_template('/static/src/html/template.html')
-    return HttpResponse(averagePrice_24h)
-    # return render(request, '/static/src/html/template.html')
+    # return HttpResponse(averagePrice_24h)
+    prices = {'averagePrice': averagePrice_24h}
+    return render(request, 'src/html/template.html', context=prices)

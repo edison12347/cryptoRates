@@ -1,16 +1,23 @@
-<html>
-    <head>
-        <title>Header</title>
-        <div>
-           <p>Exchange rate</p>
-           <p>API</p>
-        </div>
-    </head>
+<!DOCTYPE html>
+{% load staticfiles %}
+    <html>
 
-    <body>
-    Hear will be table
-    </body>
-<footer>
-    Some footer
-</footer>
-</html>
+        <head>
+            <title>Header</title>
+            <link rel="stylesheet" href="{% static 'css/style.css' %}">
+            <div>
+               <p>Exchange rate</p>
+               <p>API</p>
+            </div>
+        </head>
+
+        <body>
+        <h2>Hear will be table</h2>
+        {{ averagePrice }}
+        <img src="{% static 'src/img/cost.png' %}" alt="Woooops something went wrong">
+
+        </body>
+        <footer>
+            Some footer
+        </footer>
+    </html>

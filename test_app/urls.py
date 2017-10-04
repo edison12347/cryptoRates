@@ -3,5 +3,5 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.rates, name='rates'),
+    url(r'^$', views.index, name='index'),
 ]
